@@ -1,0 +1,7 @@
+CREATE database pleroma_dev;
+\c pleroma_dev
+CREATE user pleroma;
+ALTER user pleroma with encrypted password 'pleroma';
+GRANT ALL ON ALL tables IN SCHEMA public TO pleroma;
+GRANT ALL ON ALL sequences IN SCHEMA public TO pleroma;
+CREATE EXTENSION citext;
